@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Task 6</title>
+  </head>
+  <body>
+    <script>
+      // Задача 6. З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість кожного товару окремо та загальну вартість. Вивести чек (як у супермаркеті) використовуючи елементи розмітки.
+      // 1) praceProduct1 - вартість одиниці товару 1
+      // 2) praceProduct2 - вартість одиниці товару 2
+      // 3) praceProduct3 - вартість одиниці товару 3
+      // 4) quantityProduct1 - кількість одиниці товару 1
+      // 5) quantityProduct2 - кількість одиниці товару 2
+      // 6) quantityProduct3 - кількість одиниці товару 3
+      // 7) costProduct - вартість кожного товару
+      // 8) totalCost - загальна вартість
+
+      // 1. Вводимо необхідні змінні
+      let praceProduct1 = parseFloat(prompt("Введіть вартість першого товару"));
+      let quantityProduct1 = parseFloat(
+        prompt("Введіть кількість першого товару")
+      );
+      let praceProduct2 = parseFloat(
+        prompt("Введіть вартість другого товару ")
+      );
+      let quantityProduct2 = parseFloat(
+        prompt("Введіть кількість другого товару")
+      );
+      let praceProduct3 = parseFloat(
+        prompt("Введіть вартість третьго товару ")
+      );
+      let quantityProduct3 = parseFloat(
+        prompt("Введіть кількість третьго товару")
+      );
+      // 2. Обчислюємо резудьтати
+      let costProduct1 = praceProduct1 * quantityProduct1;
+      let costProduct2 = praceProduct2 * quantityProduct2;
+      let costProduct3 = praceProduct3 * quantityProduct3;
+      let totalCost = costProduct1 + costProduct2 + costProduct3;
+      // 3. Виведення результатів
+      document.write(`
+      <table border 2px">
+        <tr>
+            <th>Назва товару</th>
+            <th>Кількість</th>
+            <th>Вартисть</th>
+        </tr>
+        <tr>
+            <th>Хліб</th>
+            <th>${quantityProduct1}</th>
+            <th>${costProduct1}</th>
+        </tr>
+        <tr>
+            <th>Сир</th>
+            <th>${quantityProduct2}</th>
+            <th>${costProduct2}</th>
+        </tr>
+        <tr>
+            <th>Молоко</th>
+            <th>${quantityProduct3}</th>
+            <th>${costProduct3}</th>
+        </tr>
+        <tr>
+            <th>Загальна вартість</th>
+            <th></th>
+            <th>${totalCost}</th>
+        </tr>
+        </table>
+      `);
+    </script>
+    <a href="index.html" class="button">На головну</a>
+  </body>
+</html>

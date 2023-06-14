@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Task 3</title>
+  </head>
+  <body>
+    <script>
+      // Задача 3. Дано вартість одиниці товару і кількість. Знайти загальну вартість та ПДВ (5% від загальної вартості).
+
+      // 1) praceProduct1 - вартість одиниці товару 1
+      // 2) praceProduct2 - вартість одиниці товару 2
+      // 3) praceProduct3 - вартість одиниці товару 3
+      // 4) quantityProduct1 - кількість одиниці товару 1
+      // 5) quantityProduct2 - кількість одиниці товару 2
+      // 6) quantityProduct3 - кількість одиниці товару 3
+      // 7) tax - ПДВ
+      // 8) totalCost - загальна вартість
+
+      // 1. Вводимо необхідні змінні
+      let praceProduct1 = parseInt(prompt("Введіть вартість першого товару"));
+      let quantityProduct1 = parseFloat(
+        prompt("Введіть кількість першого товару")
+      );
+      let praceProduct2 = parseInt(prompt("Введіть вартість другого товару "));
+      let quantityProduct2 = parseFloat(
+        prompt("Введіть кількість другого товару")
+      );
+      let praceProduct3 = parseInt(prompt("Введіть вартість третьго товару "));
+      let quantityProduct3 = parseFloat(
+        prompt("Введіть кількість третьго товару")
+      );
+      // 2. Обчислюємо резудьтати
+      let totalCost =
+        praceProduct1 * quantityProduct1 +
+        praceProduct2 * quantityProduct2 +
+        praceProduct3 * quantityProduct3;
+      let tax = (totalCost * 5) / 100;
+      // 3. Виведення результатів
+      document.write(` <h6> Загальна вартість ${totalCost} грн. </h6>`);
+      document.write(
+        ` <h6> Податок 5% від загальної вартості ${totalCost}грн. = ${tax} грн. </h6>`
+      );
+    </script>
+    <a href="index.html" class="button">На головну</a>
+  </body>
+</html>

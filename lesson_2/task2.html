@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Task 2</title>
+  </head>
+  <body>
+    <script>
+      // Задача 2. Дано рік народження (дата: 1 січня) та поточний рік. Знайти кількість років.
+
+      // 1) yearOfBirth - рік народження
+      // 2) currentYear - поточний рік
+      // 3) numberOfYears - поточний рік
+
+      // 1. Вводимо необхідні змінні
+      let yearOfBirth = parseFloat(
+        prompt("Введіть рік народження", "1985 рік")
+      );
+      const currentYear = 2023;
+      // 2. Обчислюємо резудьтати
+      let numberOfYears = currentYear - yearOfBirth;
+      // 3. Виведення результатів
+      alert(`Вам ${numberOfYears} років`);
+    </script>
+    <a href="index.html" class="button">На головну</a>
+  </body>
+</html>

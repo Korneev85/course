@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Задача 5. Дано кількість секунд, що пройшла від початку доби. Визначити скільки це годин і хвилин.
+
+      // 1) howManySeconds - кількість секунд
+      // 2) hours - години
+      // 3) minutes - хвилини
+      // 4) seconds - секунди
+      // 5) remainderInSeconds - залишок в секундах
+      // 6) minutesInHours - хвилин у часі
+      // 7) secondsInHours - секунд у часі
+
+      // 1. Вводимо необхідні змінні
+      let howManySeconds = parseInt(
+        prompt("Введіть кількість секунд, що пройшла від початку доби", "сек.")
+      );
+      const secondsInHours = 3600;
+      const minutesInHours = 60;
+      // 2. Обчислюємо резудьтати
+      let hours = Math.floor(howManySeconds / secondsInHours);
+      let remainderInSeconds = howManySeconds % secondsInHours;
+      let minutes = remainderInSeconds / minutesInHours;
+      let seconds = howManySeconds % minutesInHours;
+      // 3. Виведення результатів
+      alert(` Зараз ${hours}:${minutes.toFixed(0)}:${seconds} годин`);
+    </script>
+    <a href="index.html" class="button">На головну</a>
+  </body>
+</html>

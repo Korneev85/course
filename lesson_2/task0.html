@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Task 0</title>
+  </head>
+  <body>
+    <script>
+      // Задача 0. Обчислити значення виразів
+
+      // 1) s1=a+12+b
+      // 2) s2=(a+b)/(2*a)
+      // 3) s3=3(a+b)c
+      // 4) s4=sin⁡(a-b)
+
+      // 1. Вводимо необхідні змінні a,b,c
+      let a = parseInt(prompt("Введіть значення числа a", "0"));
+      let b = parseInt(prompt("Введіть значення числа b", "0"));
+      let c = parseInt(prompt("Введіть значення числа c", "0"));
+      // 2. Обчислюємо резудьтати
+      let s1 = a + 12 + b;
+      let s2 = Math.sqrt((a + b) / (2 * a));
+      let s3 = Math.cbrt((a + b) * c);
+      let s4 = Math.sin(a / -b);
+      // 3. Виведення результатів
+      document.write(` <h6> Total S1 = ${s1} </h6> <br>`);
+      document.write(` <h6> Total S2 = ${s2.toFixed(2)} </h6> <br>`);
+      document.write(` <h6> Total S3 = ${s3.toFixed(2)} </h6> <br>`);
+      document.write(` <h6> Total S4 = ${s3.toFixed(2)} </h6> <br>`);
+    </script>
+    <a href="index.html" class="button">На головну</a>
+  </body>
+</html>

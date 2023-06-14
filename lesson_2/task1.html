@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1</title>
+  </head>
+  <body>
+    <script>
+      // Задача 1. Знайти суму, добуток та частку двох дійсних чисел. Результат вивести у формі таблиці
+
+      // 1) firstNumber - перше дійсне число
+      // 2) secondNumber - друге дійсне число
+      // 3) sumTwoNumber - сума двох дійсних чисел
+      // 4) productTwoNumber - добуток двох дійсних чисел
+      // 5) divisionTwoNumber - частка двох дійсних чисел
+
+      // 1)---------------
+      // 1. Вводимо значення
+      const firstNumber = parseFloat(prompt("Перше дійсне число"));
+      const secondNumber = parseFloat(prompt("Друге дійсне число"));
+      // 2. Обчислюємо резудьтати
+      let sumTwoNumber = firstNumber + secondNumber;
+      let productTwoNumber = firstNumber * secondNumber;
+      let divisionTwoNumber = firstNumber / secondNumber;
+      // 3. Виведення результатів у таблицю
+      document.write(`
+      <table border="2px">
+        <tr>
+            <th>Обчислення</th>
+            <th>Результат</th>
+        </tr>
+        <tr>
+            <th>Сума</th>
+            <th>${sumTwoNumber}</th>
+        </tr>
+        <tr>
+            <th>Добуток</th>
+            <th>${productTwoNumber}</th>
+        </tr>
+        <tr>
+            <th>Частка</th>
+            <th>${divisionTwoNumber}</th>
+        </tr>
+        </table>
+      `);
+    </script>
+    <a href="index.html" class="button">На головну</a>
+  </body>
+</html>
