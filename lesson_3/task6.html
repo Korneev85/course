@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Task 6</title>
+  </head>
+  <body>
+    <script>
+      // Задача 6. З клавіатури вводиться номер дня тижня. Вивести на екран назву дня.
+      // 1) numberDey - номер дня тижня
+      // 2) nameDay - назвa дня
+
+      // 1. Вводимо необхідні змінні
+      const numberDey = parseInt(prompt("Введіть номер дня тижня від 1 до 7"));
+      let nameDay;
+      // 2. Віконуем задачу
+      switch (numberDey) {
+        case 1:
+          nameDay = "Понеділок";
+          break;
+        case 2:
+          nameDay = "Вівторок";
+          break;
+        case 3:
+          nameDay = "Середа";
+          break;
+        case 4:
+          nameDay = "Четвер";
+          break;
+        case 5:
+          nameDay = "Пьятніця";
+          break;
+        case 6:
+          nameDay = "Субота";
+          break;
+        case 7:
+          nameDay = "Неділя";
+          break;
+        default:
+          nameDay = "Некоректне число";
+          break;
+      }
+      // 3. Виведення результатів
+      document.write(` <h6> ${nameDay} </h6>`);
+    </script>
+    <a href="index.html" class="button">На головну</a>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Задача 5. З клавіатури вводиться назва категорії водія (А-мотоцикл, В-легковий автомобіль, С-вантажний автомобіль). Вивести на екран назву транспортного засобу, яким він може керувати.
+
+      // 1) driverСategory - назва категорії водія
+      // 2) nameCategory - назва транспортного засобу
+
+      // 1. Вводимо необхідні змінні
+      const driverСategory = prompt("Введіть Вашу категорію водія", "A");
+      let nameCategory;
+      // 2. Віконуем задачу
+      switch (driverСategory.toUpperCase()) {
+        case "А":
+        case "A":
+          nameCategory = "Ви можете керувати мотоциклом";
+          break;
+        case "B":
+        case "В":
+          nameCategory = "Ви можете керувати легковим автомобілем";
+          break;
+        case "C":
+        case "С":
+          nameCategory = "Ви можете керувати вантажним автомобілем";
+          break;
+        default:
+          nameCategory = "Ой, щось пішло не так";
+          break;
+      }
+      // 3. Виведення результатів
+      document.write(` <h6> ${nameCategory} </h6>`);
+    </script>
+    <a href="index.html" class="button">На головну</a>
+  </body>
+</html>

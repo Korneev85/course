@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Task 1</title>
+  </head>
+  <body>
+    <script>
+      // Задача 1. З клавіатури вводяться імена двох дітей та кількість у них цукерок. Вивести на екран ім’я тієї дитини, у якої кількість цукерок є більшою, або вивести, що кількість однакова.
+      // 1) nameFirstChild - ім'я першой дитини
+      // 2) nameSecondChild - ім'я другой дитини
+      // 3) numberСandiesFirstChild - кількість цукерок першой дитини
+      // 4) numberСandiesSecondChild - кількість цукерок другой дитини
+
+      // 1)---------------
+      // 1. Вводимо значення
+      const nameFirstChild = prompt("Введіть ім'я першой дитини");
+      let numberСandiesFirstChild = parseInt(
+        prompt("Введіть кількість цукерок першой дитини")
+      );
+      const nameSecondChild = prompt("Введіть ім'я другой дитини");
+      let numberСandiesSecondChild = parseInt(
+        prompt("Введіть кількість цукерок другой дитини")
+      );
+      // 2. Обчислюємо резудьтати
+      if (numberСandiesFirstChild > numberСandiesSecondChild)
+        document.write(`<h6>${nameFirstChild} має більше цукерок</h6>`);
+      else if (numberСandiesFirstChild < numberСandiesSecondChild)
+        document.write(`<h6>у ${nameSecondChild} має більше цукерок</h6>`);
+      else numberСandiesFirstChild === numberСandiesSecondChild;
+      document.write(
+        `<h6>${nameFirstChild} та ${nameSecondChild} має однакову кількість цукерок</h6>`
+      );
+    </script>
+    <a href="index.html" class="button">На головну</a>
+  </body>
+</html>
