@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Task 3</title>
+  </head>
+  <body>
+    <script>
+      // Задача 8. Користувач загадує число. За 3 спроби комп’ютер намагається вгадати число користувача (використати confirm).
+
+      // 1) userGuessesNumber - користувач загадує число
+      // 2) randomNumbers -випадкове чисело
+
+      // 1. Вводимо необхідні змінні
+      let userGuessesNumber = parseInt(prompt("Загадайте число від 1 до 5"));
+
+      // 2. Обчислюємо резудьтати
+      for (let i = 0; i < 3; i++) {
+        const randomNumbers = 1 + Math.floor(Math.random() * 5);
+        if (userGuessesNumber === randomNumbers) {
+          window.confirm("комп’ютер вгадал число");
+        } else window.confirm("комп’ютер не вгадал число");
+      }
+    </script>
+    <a href="index.html" class="button">На головну</a>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Task 8</title>
+  </head>
+  <body>
+    <script>
+      // Задача 8. Знайти 2 числа з 4-х цілих чисел.
+
+      // 1. Вводимо необхідні змінні
+      const num1 = parseInt(prompt("Num 1"));
+      const num2 = parseInt(prompt("Num 2"));
+      const num3 = parseInt(prompt("Num 3"));
+      const num4 = parseInt(prompt("Num 4"));
+      let max1, max2;
+      //   max1 > max2
+      // 2. Обчислюємо резудьтати
+      if (num1 > num2) {
+        max1 = num1;
+        max2 = num2;
+      } else {
+        max1 = num2;
+        max2 = num1;
+      }
+      if (num3 > max1) {
+        max2 = max1;
+        max1 = num3;
+      } else if (num3 > max2) max2 = num3;
+      if (num4 > max1) {
+        max2 = max1;
+        max1 = num4;
+      } else if (num4 > max2) max2 = num4;
+
+      // 3. Виведення результатів
+      document.write(` <h6> max1 = ${max1} <Br> max2  = ${max2}</h6>`);
+    </script>
+    <a href="index.html" class="button">На головну</a>
+  </body>
+</html>

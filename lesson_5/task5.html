@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Task 5</title>
+  </head>
+  <body>
+    <script>
+      // Задача 16. Користувач (рондомно від 1000 до 10000) поступово вводить прибуток магазину за кожен день протягом N тижнів.
+      // Знайти загальну величину прибутку та вивести величину прибутку протягом кожного окремого тижня.
+
+      // 1) profitStore - прибуток магазину за кожен день
+      // 2) sumProfitWeek - сума прибутку кожного окремого тижня
+      // 3) sum - загальна сума прибутку
+
+      // 1. Вводимо необхідні змінні
+      let howManySeconds = parseFloat(
+        prompt("Введіть кільлімть тіжней для підрахунку загального прібутку")
+      );
+      // 2. Обчислюємо резудьтати
+      let sum = 0;
+      let sumProfitWeek = 0;
+      for (let i = 1; i <= howManySeconds; i++) {
+        for (let s = 1; s <= 7; s++) {
+          const profitStore = 1000 + Math.floor(Math.random() * 10000);
+          sumProfitWeek += profitStore;
+        }
+        sum += sumProfitWeek;
+      }
+      // 3. Виведення результатів
+      document.write(
+        ` <h6> Сума прибутку кожного окремого тижня = ${sumProfitWeek.toLocaleString(
+          "uk-UA"
+        )}грн. <Br> Загальна сума прибутку = ${sum.toLocaleString(
+          "uk-UA"
+        )}грн.</h6>`
+      );
+    </script>
+    <a href="index.html" class="button">На головну</a>
+  </body>
+</html>

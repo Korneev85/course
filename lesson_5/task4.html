@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Task 4</title>
+  </head>
+  <body>
+    <script>
+      // Задача 14. Каса. Користувачу повідомляють суму, яку йому треба сплатити.
+      // Користувач поступово вводить суму грошей до тих пір, поки суми не буде достатньо для оплати товарів
+      // (кожного разу користувачу повідомляють, яку ще суму потрібно ввести).
+
+      // 1) sumToBePaid - сума, яку треба сплатити
+      // 2) sumMoney - сума грошей
+
+      // 1. Вводимо необхідні змінні
+      let sumToBePaid = parseFloat(prompt("Введіть суму, яку треба сплатити"));
+      // 2. Обчислюємо резудьтати
+      while (sumToBePaid > 0) {
+        let sumMoney = parseFloat(prompt("Яку суму, ви плануєте внести"));
+        if (sumMoney < sumToBePaid) {
+          sumToBePaid -= sumMoney;
+          alert(`Платіж пройшов, залішелось внести ${sumToBePaid}`);
+        } else {
+          alert("Грошей вістачає до сплати товару");
+          break;
+        }
+      }
+    </script>
+    <a href="index.html" class="button">На головну</a>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Task 5</title>
+  </head>
+  <body>
+    <script>
+      // Задача 7. Дано 3 сайті, на яких користувач хоче купити 2 товари. Але якщо гроші закінчились, то покупка припиняєтся.
+
+      // 1. Вводимо необхідні змінні
+      let userMoney = parseFloat(prompt("userMoney"));
+      // 2. Обчислюємо резудьтати
+      siteLabel: for (let sitesNum = 1; sitesNum <= 3; sitesNum++) {
+        for (let productNum = 1; productNum <= 2; productNum++) {
+          const productPrice = parseFloat(
+            prompt(`Site : ${sitesNum}, product num : ${productNum}`)
+          );
+          if (productNum <= userMoney) {
+            alert("Вітаємо з покупкой");
+            userMoney -= productPrice;
+          }
+          if (userMoney === 0) {
+            break siteLabel;
+          }
+        }
+        alert("Вітаємо з покупкой");
+      }
+    </script>
+    <a href="index.html" class="button">На головну</a>
+  </body>
+</html>
