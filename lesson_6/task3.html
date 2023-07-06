@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Task 3</title>
+  </head>
+  <body>
+    <script>
+      // Задача 3. У комп’ютер вводяться по черзі дані про зріст N учнів класу. Визначити середній зріст учнів класу.
+
+      // 1) numberStudents - кількість учнів
+      // 2) heightStudents - зріст учнів
+      // 3) averageHeight - середній зріст учнів класу
+
+      // 1. Вводимо необхідні змінні
+      let sum = 0;
+      let numberStudents = parseInt(prompt("Введить кількість учнів"));
+
+      // 2. Обчислюємо резудьтати
+
+      for (let i = 1; i <= numberStudents; i++) {
+        let heightStudents = parseFloat(prompt(`Введить зріст учня ${i}`));
+        sum += heightStudents;
+      }
+      let averageHeight = sum / numberStudents;
+      // 3. Виведення результатів
+      document.write(
+        `<h6>Cередній зріст учнів класу = ${averageHeight} <Br></h6>`
+      );
+    </script>
+    <a href="index.html" class="button">На головну</a>
+  </body>
+</html>

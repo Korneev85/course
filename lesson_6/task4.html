@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Task 4</title>
+  </head>
+  <body>
+    <script>
+      // Задача 14. Є шматок тканини довжиною M метрів.
+      // Від нього послідовно відрізають шматки різної довжини.
+      // Усі дані щодо використання тканини вводяться до комп'ютера.
+      // Комп'ютер повинен вивести повідомлення про те, що матеріалу не вистачає, якщо буде потрібен шматок тканини, довжина якого перевищує довжину шматка, що залишився.
+
+      // 1) lengthFabric - довжина тканини
+      // 2) pieceLength - шматки різної довжини
+
+      // 1. Вводимо необхідні змінні
+      let lengthFabric = parseFloat(prompt("Введіть довжину тканини", "м."));
+      // 2. Обчислюємо резудьтати
+      while (lengthFabric > 0) {
+        let pieceLength = parseFloat(
+          prompt("Яку довжинe, ви плануєте відрізати?")
+        );
+        if (pieceLength <= lengthFabric) {
+          lengthFabric -= pieceLength;
+          alert(`Залишелось ${lengthFabric}м. тканини`);
+        } else if ((pieceLength) => lengthFabric) {
+          alert(`Матеріалу не вістачає, залішок ${lengthFabric}`);
+        }
+      }
+    </script>
+    <a href="index.html" class="button">На головну</a>
+  </body>
+</html>

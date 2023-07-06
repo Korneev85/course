@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Task 12</title>
+  </head>
+  <body>
+    <script>
+      // Задача 12. Морськой бій
+      // Комп'ютер випадково розташовує одиночний корабиль на полі N*M.
+      // Маючи К снарядів користувач намагаєтся потопити корабль.
+
+      // 1. Вводимо необхідні змінні
+
+      const rowsNumber = parseInt(prompt("Кількість рядків")); // N
+      const columnsNumber = parseInt(prompt("Кількість стовпців")); // M
+      let shells = parseInt(prompt("Кількість снарядів")); // K
+
+      // 2. Обчислюємо резудьтати
+
+      const numRowPosition = Math.floor(Math.random() * rowsNumber);
+      const numColumnPosition = Math.floor(Math.random() * columnsNumber);
+      let userRow, userColumn, checkShootResult;
+
+      do {
+        userRow = parseInt(prompt("Номер рядків"));
+        userColumn = parseInt(prompt("Номер стовпців"));
+        shells--;
+        checkShootResult =
+          userRow === numRowPosition && userColumn === numColumnPosition;
+        if (!checkShootResult)
+          alert(`Не попав ${numRowPosition} - ${numColumnPosition}`);
+      } while (!checkShootResult && shells > 0);
+      if (userRow === numRowPosition && userColumn === numColumnPosition)
+        alert("Перемога");
+      else alert("Програш");
+    </script>
+    <a href="index.html" class="button">На головну</a>
+  </body>
+</html>

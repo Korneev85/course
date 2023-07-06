@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Task 11</title>
+  </head>
+  <body>
+    <script>
+      // Задача 11. Комп'ютер 3 рази випадковим чином вибирає початок і кінець проміжку від 1 до 100.
+      // Користувач вводить чісло і виграє, якщо число знаходітся у проміжку від лівого або правого краю не більше ніж на 10.
+      // ((min-10)...(max+10))
+
+      // 1. Обчислюємо резудьтати
+      for (let i = 0; i < 3; i++) {
+        let minNum = Math.floor(Math.random() * 100);
+        let maxNum = Math.floor(Math.random() * 100);
+        if (minNum > maxNum) {
+          let tmp = minNum;
+          minNum = maxNum;
+          maxNum = tmp;
+        }
+        const userNum = parseInt(prompt("Ваше число?"));
+        const result =
+          userNum >= minNum && userNum <= maxNum ? "Перемога" : "Програш";
+        // 2. Виведення результатів
+        alert(`${result}`);
+      }
+    </script>
+    <a href="index.html" class="button">На головну</a>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Task 5</title>
+  </head>
+  <body>
+    <script>
+      // Задача 7. Поступово генеруються N чисел (-100 до 100). Знайти максимальне, мінемальне та середнє значення
+
+      // maxNumber
+      // minNumber
+      // average
+      // sum
+      // numbersCount
+
+      // 1. Вводимо необхідні змінні
+      const numbersCount = parseInt(prompt("Кількість чисел"));
+      let sum = 0;
+      let maxNumber = -Infinity;
+      let minNumber = Infinity;
+      // 2. Обчислюємо резудьтати
+      for (let i = 0; i < numbersCount; i++) {
+        const randNum = -100 + Math.floor(Math.random() * 100);
+        if (maxNumber < randNum) maxNumber = randNum;
+        else if (minNumber > randNum) minNumber = randNum;
+        sum += randNum;
+      }
+      const average = sum / numbersCount;
+      document.write(
+        `Average = ${average}  <br> Max = ${maxNumber} <br> Min = ${minNumber} <br>`
+      );
+    </script>
+    <a href="index.html" class="button">На головну</a>
+  </body>
+</html>

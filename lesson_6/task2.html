@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Task 2</title>
+  </head>
+  <body>
+    <script>
+      // Задача 2. Комп’ютер загадує випадкове число від 1 до 10. Вгадати число шляхом введеня можливих варіантів.
+      // В кінці вивести кількість спроб користувача.
+
+      // 1) randomNumbers - випадкове чисело
+      // 2) userNumber
+      // 3) numberAttempts - кількість спроб
+
+      // 1. Вводимо необхідні змінні
+      let numberAttempts = 0;
+      let checkResult;
+      // 2. Обчислюємо резудьтати
+      const randomNumbers = Math.floor(Math.random() * 10);
+      do {
+        let userNumber = parseInt(prompt("Вгадайте число", "від 1-10"));
+        checkResult = randomNumbers === userNumber;
+        if (!checkResult) alert("Не вгадав");
+        numberAttempts++;
+      } while (!checkResult);
+      if (checkResult) alert("Вгадав");
+      document.write(`<h6>Кількість спроб = ${numberAttempts}<br></h6>`);
+    </script>
+    <a href="index.html" class="button">На головну</a>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Task 1</title>
+  </head>
+  <body>
+    <script>
+      // Задача 1.  Інвестор вклав S тис. грн на 20 років під 20% річних, податок складає 5% від суми прибутку.
+      // Визначити за допомогою циклів суму, яку він одержить.
+
+      // deposit - вклад
+      // income - доход
+      // profit - прибуток
+      // tax = 5%
+
+      let income = 0;
+      let deposit = parseInt(prompt("Введіть суму вклада"));
+      for (let i = 0; i < 20; i++) {
+        income = deposit * (20 / 100);
+        deposit += income;
+      }
+      let tax = deposit * (5 / 100);
+      let profit = deposit - tax;
+      document.write(
+        `<h6>Прибуток = ${deposit.toLocaleString(
+          "uk-UA"
+        )} грн.<br>Податок - 5% від суми прибутку = ${tax.toLocaleString(
+          "uk-UA"
+        )} грн.<br></h6>`
+      );
+    </script>
+    <a href="index.html" class="button">На головну</a>
+  </body>
+</html>

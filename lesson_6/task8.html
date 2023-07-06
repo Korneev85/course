@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Task 8</title>
+  </head>
+  <body>
+    <script>
+      // Задача 8. Вивести усі трицифрові числа, де друга ціфра є меншою за першу, а третя є меншою або ривною за другу.  приклад 100 - 999
+
+      // 1. Обчислюємо резудьтати
+
+      for (let c1 = 1; c1 <= 9; c1++) {
+        for (let c2 = 0; c2 <= c1; c2++) {
+          for (let c3 = 0; c3 <= c2; c3++) {
+            document.write(`${c1}${c2}${c3}<Br></h6>`);
+          }
+        }
+      }
+    </script>
+    <a href="index.html" class="button">На головну</a>
+  </body>
+</html>

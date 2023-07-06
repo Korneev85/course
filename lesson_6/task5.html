@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Task 5</title>
+  </head>
+  <body>
+    <script>
+      // Задача 5. Розпочавши тренування, спортсмен першого дня пробіг 10 км. Щодня він збільшував денну норму на 10% від норми попереднього дня.
+      // Який сумарний шлях пробіжить спортсмен за 8 днів?
+      // Якого дня вперше спортсмен пробіжить понад 20 км?
+      // Якого дня вперше сумарний шлях перевищить 60 км?
+
+      // 1. Вводимо необхідні змінні
+      let athleteRan = 10;
+      let totalPath = 0;
+      let day;
+      // 2. Обчислюємо резудьтати
+      for (day = 1; day <= 8; day++) {
+        athleteRan = athleteRan * (1 + 0.1);
+        document.write(
+          `Збільшення на 10% ${day} дня = ${athleteRan.toFixed()} км<br>`
+        );
+        totalPath = totalPath + athleteRan;
+        if (totalPath > 60 && totalPath < 70) {
+          document.write(
+            `Сумарний шлях спортсмена 60 км перевищить на ${day} день<br>`
+          );
+        }
+        if (athleteRan > 20) {
+          document.write(
+            `Вперше спортсмен пробіжить понад 20 км на ${day} день<br>`
+          );
+        }
+      }
+      document.write(
+        `Сумарний шлях спортсмена за 8 днів = ${totalPath.toFixed()}<br>`
+      );
+    </script>
+    <a href="index.html" class="button">На головну</a>
+  </body>
+</html>

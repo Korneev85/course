@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Task 9</title>
+  </head>
+  <body>
+    <script>
+      // Задача 9. Вивести 3 кожного десятка (1-10, 11-20, 21-30, ... 91-100) по 3 випадкових парніх числа.
+
+      // rangeStart - 1
+      // rangeEnd - 10
+
+      // 1. Обчислюємо резудьтати
+      for (
+        let rangeStart = 1, rangeEnd = 10;
+        rangeEnd <= 100;
+        rangeStart += 10, rangeEnd += 10
+      ) {
+        for (let i = 0; i < 3; ) {
+          const randNum =
+            rangeStart +
+            Math.floor(Math.random() * (rangeEnd - rangeStart + 1));
+          if (randNum % 2 === 0) {
+            document.write(`${randNum}<br>`);
+            i++;
+          }
+        }
+      }
+    </script>
+    <a href="index.html" class="button">На головну</a>
+  </body>
+</html>
